@@ -17,6 +17,22 @@
             margin: 10px auto;
         }
 
+        span {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            margin-left: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
         @media only screen and (max-width: 1000px) {
             img {
                 max-width: 100%;
@@ -28,10 +44,61 @@
 <body class="stackedit">
     <div class="stackedit__html">
         <h1 id="project-idea--betit">Codename Bet’it : Design</h1>
+        <h2>Colors</h2>
     </div>
 
 <script>
     $(document).ready(function(e) {
+        let parent = $('.stackedit__html');
+
+        let colors = [
+            {
+                'color': '#FFC000',
+                'title': 'Primary 1'
+            },
+            {
+                'color': '#FFD600',
+                'title': 'Primary 2'
+            },
+            {
+                'color': '#B9B8B8',
+                'title': 'Grey'
+            },
+            {
+                'color': '#C8C8C8',
+                'title': 'Light Grey'
+            },
+            {
+                'color': '#1089f9',
+                'title': 'Blue'
+            },
+            {
+                'color': '#3cc43e',
+                'title': 'Green'
+            },
+            {
+                'color': 'rgba(60,196,62,.2)',
+                'title': 'Light Green'
+            },
+            {
+                'color': '#34495e',
+                'title': 'Dark Grey'
+            },
+            {
+                'color': '#e74c3c',
+                'title': 'Red'
+            },
+        ];
+
+        for (let color of colors) {
+            let html = `
+                <span style="background: ${color.color}" class="color"></span>
+                <p>${color.title}</p><br />
+            `;
+            parent.append(html);
+
+        }
+
         let elements = [
             {
                 img: '../assets/mockups/empty_screen.png',
@@ -95,8 +162,7 @@
             },
         ];
 
-        let parent = $('.stackedit__html');
-
+        // render images
         for (let element of elements) {
             let html = `
                 <h2>${element.title}</h2>
