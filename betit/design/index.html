@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bet&#x27;it</title>
+    <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <script crossorigin="anonymous"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <style>
+        img {
+            max-width: 50%;
+            display: inherit;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body class="stackedit">
+    <div class="stackedit__html">
+        <h1 id="project-idea--betit">Codename Bet’it : Design</h1>
+    </div>
+
+<script>
+    $(document).ready(function(e) {
+        let elements = [
+            {
+                img: '../assets/mockups/empty_screen.png',
+                title: 'Empty Screen'
+            },
+            {
+                img: '../assets/mockups/sign_up_step_1.png',
+                title: 'Sign up Step 1'
+            },
+            {
+                img: '../assets/mockups/sign_up_step_2.png',
+                title: 'Sign up Step 2'
+            },
+            {
+                img: '../assets/mockups/sign_in.png',
+                title: 'Sign In'
+            },
+            {
+                img: '../assets/mockups/menu_option_1.png',
+                title: 'Menu Option 1'
+            },
+            {
+                img: '../assets/mockups/menu_option_2.png',
+                title: 'Menu Option 2'
+            },
+            {
+                img: '../assets/mockups/menu_option_1_better.png',
+                title: 'Menu Option 1 (for better)'
+            },
+            {
+                img: '../assets/mockups/feed.png',
+                title: 'Feed'
+            },
+            {
+                img: '../assets/mockups/search_step_1.png',
+                title: 'Search Step 1'
+            },
+            {
+                img: '../assets/mockups/search_step_2.png',
+                title: 'Search Step 2'
+            },
+            {
+                img: '../assets/mockups/settings.png',
+                title: 'Settings'
+            },
+            {
+                img: '../assets/mockups/publish_bet.png',
+                title: 'Publish a bet'
+            },
+            {
+                img: '../assets/mockups/publish_bet_preview.png',
+                title: 'Publish a bet (preview)'
+            },
+            {
+                img: '../assets/mockups/better_profile.png',
+                title: 'Profile (betters only)'
+            },
+            {
+                img: '../assets/mockups/better_request.png',
+                title: 'Become a better'
+            },
+        ];
+
+        let parent = $('.stackedit__html');
+
+        for (let element of elements) {
+            let html = `
+                <h2>${element.title}</h2>
+                <img src="${element.img}" alt="${element.title}">
+            `;
+            parent.append(html);
+        }
+    });
+</script>
+</body>
+</html>
